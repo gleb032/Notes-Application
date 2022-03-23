@@ -13,6 +13,9 @@ class NotesTableViewController: UITableViewController {
         super.viewDidLoad()
         self.title = "Notes"
         self.navigationItem.rightBarButtonItem = self.editButtonItem
+        if (notes.count==0) {
+            notes.append(Note(title: "Example", description: "Hey!"))
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
